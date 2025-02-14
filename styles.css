@@ -1,15 +1,15 @@
-/* Reset para mejorar la apariencia en móviles */
+/* Reset general */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Fondo general */
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #ffebee; /* Color suave */
+    background-color: #ffebee; /* Fondo suave */
     color: #333;
     padding: 20px;
 }
@@ -30,34 +30,37 @@ h1 {
     font-size: 24px;
 }
 
-/* Estilo del mensaje */
-p {
-    font-size: 16px;
-    margin-top: 10px;
-    line-height: 1.5;
+/* Estilo del mensaje con fuente elegante */
+.message {
+    font-family: 'Dancing Script', cursive;
+    font-size: 22px;
+    font-weight: 600;
+    color: #d81b60;
+    text-align: center;
+    margin-top: 15px;
+    line-height: 1.6;
 }
 
-/* Contenedor de la foto con el corazón */
+/* Contenedor de fotos */
 .photo-container {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    position: relative;
 }
 
 /* Fotos */
 .photo {
-    width: 35%; /* Reducir tamaño */
-    max-width: 120px; /* Limitar tamaño máximo */
+    width: 35%; /* Tamaño proporcional */
+    max-width: 120px; /* Máximo tamaño */
     height: auto;
     border-radius: 10px;
 }
 
-/* Corazón en el medio */
+/* Corazón animado */
 .heart {
-    font-size: 30px; /* Tamaño ajustado */
-    margin: 0 5px; /* Reducir espacio */
+    font-size: 30px;
+    margin: 0 5px;
     animation: heartbeat 1s infinite alternate;
 }
 
@@ -77,12 +80,12 @@ p {
         font-size: 20px;
     }
 
-    p {
-        font-size: 14px;
+    .message {
+        font-size: 18px;
     }
 
     .photo {
-        width: 40%; /* Ajustar tamaño para pantallas más pequeñas */
+        width: 40%;
         max-width: 100px;
     }
 
