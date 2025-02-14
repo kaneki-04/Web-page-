@@ -1,4 +1,4 @@
-/* Reset para quitar márgenes y mejorar la apariencia en móviles */
+/* Reset para mejorar la apariencia en móviles */
 * {
     margin: 0;
     padding: 0;
@@ -48,14 +48,16 @@ p {
 
 /* Fotos */
 .photo {
-    width: 40%;
+    width: 35%; /* Reducir tamaño */
+    max-width: 120px; /* Limitar tamaño máximo */
+    height: auto;
     border-radius: 10px;
 }
 
 /* Corazón en el medio */
 .heart {
-    font-size: 40px;
-    margin: 0 10px;
+    font-size: 30px; /* Tamaño ajustado */
+    margin: 0 5px; /* Reducir espacio */
     animation: heartbeat 1s infinite alternate;
 }
 
@@ -79,7 +81,12 @@ p {
         font-size: 14px;
     }
 
+    .photo {
+        width: 40%; /* Ajustar tamaño para pantallas más pequeñas */
+        max-width: 100px;
+    }
+
     .heart {
-        font-size: 30px;
+        font-size: 25px;
     }
 }
