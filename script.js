@@ -1,10 +1,12 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const mensaje = document.querySelector("p");
-    mensaje.style.opacity = "0";
-    mensaje.style.transform = "translateY(10px)";
+document.addEventListener("DOMContentLoaded", () => {
+    const mensaje = document.querySelector(".message");
+    
+    // Asegura que el mensaje comience oculto
+    mensaje.classList.add("oculto");
+
+    // Espera 500ms antes de mostrar el mensaje con animación
     setTimeout(() => {
-        mensaje.style.transition = "opacity 1.5s, transform 1.5s";
-        mensaje.style.opacity = "1";
-        mensaje.style.transform = "translateY(0)";
+        mensaje.classList.remove("oculto");
+        mensaje.classList.add("animado");
     }, 500);
 });

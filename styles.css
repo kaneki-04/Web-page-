@@ -1,3 +1,6 @@
+/* Fuente personalizada */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand:wght@400;600&display=swap');
+
 /* Reset general */
 * {
     margin: 0;
@@ -7,9 +10,9 @@
 
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Quicksand', sans-serif;
     text-align: center;
-    background-color: #ffebee; /* Fondo suave */
+    background: linear-gradient(to right, #ffe4e1, #fff0f5); /* Fondo suave y romántico */
     color: #333;
     padding: 20px;
 }
@@ -18,53 +21,76 @@ body {
 .container {
     max-width: 90%;
     margin: auto;
-    background: white;
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background: #ffffffcc;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
 }
 
-/* Estilo del título */
-h1 {
+/* Títulos */
+h1, h2 {
     color: #d81b60;
-    font-size: 24px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
-/* Estilo del mensaje con fuente elegante */
+/* Mensaje */
 .message {
     font-family: 'Dancing Script', cursive;
     font-size: 22px;
-    font-weight: 600;
-    color: #d81b60;
-    text-align: center;
-    margin-top: 15px;
-    line-height: 1.6;
+    color: #c2185b;
+    line-height: 1.7;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+/* Animación de aparición */
+.message.oculto {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.message.animado {
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Contenedor de fotos */
 .photo-container {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
+    align-items: center;
+    margin-top: 30px;
+    gap: 10px;
 }
 
 /* Fotos */
 .photo {
-    width: 35%; /* Tamaño proporcional */
-    max-width: 120px; /* Máximo tamaño */
+    width: 30%;
+    max-width: 120px;
     height: auto;
-    border-radius: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
 }
 
-/* Corazón animado */
+.photo:hover {
+    transform: scale(1.05);
+}
+
+/* Corazones animados */
 .heart {
     font-size: 30px;
-    margin: 0 5px;
+    margin: 0 10px;
     animation: heartbeat 1s infinite alternate;
+    color: #e91e63;
 }
 
-/* Animación del corazón */
+/* Animación de corazón */
 @keyframes heartbeat {
     from {
         transform: scale(1);
@@ -74,10 +100,17 @@ h1 {
     }
 }
 
-/* Ajustes para pantallas pequeñas */
+/* Footer */
+footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #888;
+}
+
+/* Responsivo */
 @media (max-width: 480px) {
-    h1 {
-        font-size: 20px;
+    h1, h2 {
+        font-size: 22px;
     }
 
     .message {
@@ -90,6 +123,6 @@ h1 {
     }
 
     .heart {
-        font-size: 25px;
+        font-size: 24px;
     }
 }
