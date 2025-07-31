@@ -12,35 +12,54 @@
 body {
     font-family: 'Quicksand', sans-serif;
     text-align: center;
-    background: linear-gradient(to right, #ffe4e1, #fff0f5); /* Fondo suave y romántico */
-    color: #333;
+    background: linear-gradient(to right, #0f0f0f, #1e1e1e); /* Fondo negro degradado */
+    color: #f0f0f0;
     padding: 20px;
+}
+
+/* Animación de aparición del contenedor */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
 /* Contenedor principal */
 .container {
     max-width: 90%;
     margin: auto;
-    background: #ffffffcc;
+    background: rgba(30, 30, 30, 0.8);
     padding: 25px;
     border-radius: 20px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(4px);
 }
 
 /* Títulos */
 h1, h2 {
-    color: #d81b60;
+    color: #f06292; /* Rosa suave que resalta en fondo negro */
     font-family: 'Dancing Script', cursive;
     font-size: 28px;
     margin-bottom: 10px;
+}
+
+/* Subtítulo adicional */
+header p {
+    color: #aaa;
+    font-size: 16px;
+    margin-top: 5px;
 }
 
 /* Mensaje */
 .message {
     font-family: 'Dancing Script', cursive;
     font-size: 22px;
-    color: #c2185b;
+    color: #f48fb1; /* Rosa pastel claro */
     line-height: 1.7;
     margin-top: 20px;
     padding: 0 10px;
@@ -74,12 +93,13 @@ h1, h2 {
     max-width: 120px;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .photo:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 105, 135, 0.3);
 }
 
 /* Corazones animados */
@@ -87,7 +107,7 @@ h1, h2 {
     font-size: 30px;
     margin: 0 10px;
     animation: heartbeat 1s infinite alternate;
-    color: #e91e63;
+    color: #e91e63; /* Rosa fuerte */
 }
 
 /* Animación de corazón */
@@ -104,13 +124,18 @@ h1, h2 {
 footer {
     margin-top: 30px;
     font-size: 14px;
-    color: #888;
+    color: #bbb;
+    font-style: italic;
 }
 
 /* Responsivo */
 @media (max-width: 480px) {
     h1, h2 {
         font-size: 22px;
+    }
+
+    header p {
+        font-size: 14px;
     }
 
     .message {
